@@ -5,4 +5,7 @@ router.get("/", (req, res, next) => {
   res.json("All good in here");
 });
 
+const authRouter = require("./auth.routes");
+router.use("/auth", authRouter);
+/*Siempre llamar a una ruta creada, si está vacía se rompe*/
 module.exports = router;
